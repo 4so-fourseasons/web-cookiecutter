@@ -1,0 +1,42 @@
+/* ===========================================
+ * main.scss
+ * =========================================== */
+
+/*
+ * base
+ */
+@import 'base/base';
+
+
+/*
+ * components
+ */
+
+
+/*
+ * layout
+ */
+@import 'layout/footer';
+@import 'layout/general';
+@import 'layout/grid';
+@import 'layout/header';
+@import 'layout/nav';
+
+
+/*
+ * pages
+ */
+
+
+/*
+ * utils
+ */
+@import 'utils/colors';
+@import 'utils/mixins';
+@import 'utils/config';
+
+
+/*
+ * vendor
+ */
+@import 'vendor/normalize/normalize-3.0.3';
