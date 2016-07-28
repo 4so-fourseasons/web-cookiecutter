@@ -1,0 +1,33 @@
+{
+  "name": "4so-web-template",
+  "version": "1.0.1",
+  "main": "index.html",
+  "description": "Basic template for new websites.",
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.4so.local:fourseasons/4so-web-template.git"
+  },
+  "keywords": [
+    "HTML5",
+    "CSS",
+    "JavaScript",
+    "SASS"
+  ],
+  "bugs": {
+    "url": "http://gitlab.4so.local/fourseasons/4so-web-template/issues"
+  },
+  "license": "UNLICENSED",
+  "private": true,
+  "author": {
+    "name": "fourseasons",
+    "email": "info@4so.de",
+    "url": "http://www.4so.de"
+  },
+  "contributors": [
+    "Henryk Kurze",
+    "Theo Salzmann"
+  ],
+  "homepage": "http://gitlab.4so.local/fourseasons/4so-web-template",
+  "dependencies": {},
+  "engines": {}
+}
