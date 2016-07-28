@@ -2,10 +2,12 @@
  * main.scss
  * =========================================== */
 
+@import "vendor/html5-boilerplate-5.3.0/base";
+
 /*
  * base
  */
-@import 'base/base';
+@import "base/base";
 
 
 /*
@@ -16,11 +18,11 @@
 /*
  * layout
  */
-@import 'layout/footer';
-@import 'layout/general';
-@import 'layout/grid';
-@import 'layout/header';
-@import 'layout/nav';
+@import "layout/footer";
+@import "layout/general";
+@import "layout/grid";
+@import "layout/header";
+@import "layout/nav";
 
 
 /*
@@ -31,12 +33,13 @@
 /*
  * utils
  */
-@import 'utils/colors';
-@import 'utils/mixins';
-@import 'utils/config';
+@import "abstracts/colors";
+@import "abstracts/mixins";
+@import "abstracts/config";
 
 
 /*
  * vendor
  */
-@import 'vendor/normalize/normalize-3.0.3';
+@import "vendor/normalize-3.0.3/normalize";
+@import "vendor/html5-boilerplate-5.3.0/helper";
