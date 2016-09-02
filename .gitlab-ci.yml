@@ -1,0 +1,19 @@
+master:
+  script:
+    - node-sass sass/ -o css/ --output-style compressed
+    - rm -r sass
+    - rm -r util
+  artifacts:
+    name: "$CI_PROJECT_NAME"
+    paths:
+      - /*
+  only:
+   - master
+  stage: build
+  
+dev:
+  script:
+   - cd js
+   - eslint main.js
+  only:
+   - dev
