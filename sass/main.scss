@@ -5,7 +5,7 @@
 /*
  * vendor
  */
-@import "vendor/normalize-3.0.3/normalize";
+@import "vendor/normalize/normalize-5.0.0";
 @import "vendor/html5-boilerplate-5.3.0/base";
 
 /*
@@ -27,7 +27,6 @@
 @import "layout/grid";
 @import "layout/header";
 @import "layout/nav-main";
-@import "layout/main";
 @import "layout/footer";
 
 /*
