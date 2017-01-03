@@ -16,5 +16,4 @@ Use `npm install` to get the required modules and then start the dev server with
 This will compile all JavaScript files into a new file using webpack with ES6
 support.
 
-Also don't forget to run the node-sass watcher using the script in the
-*util* folder.
+For SASS use the following command in a new cmd-window: `npm run sass-watch`.
