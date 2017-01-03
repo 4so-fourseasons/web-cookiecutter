@@ -180,3 +180,8 @@ jspm_packages
 
 # Yarn Integrity file
 .yarn-integrity
+
+# Project
+# ======================================================================================================================
+src/js/main.bundle.*
+src/css

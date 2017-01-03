@@ -1,6 +1,6 @@
 {
   "name": "4so-web-template",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "index.html",
   "description": "Basic template for new websites.",
   "repository": {
@@ -16,6 +16,9 @@
   "bugs": {
     "url": "http://gitlab.4so.local/fourseasons/4so-web-template/issues"
   },
+  "scripts": {
+    "start": "webpack-dev-server"
+  },
   "license": "UNLICENSED",
   "private": true,
   "author": {
@@ -29,5 +32,15 @@
   ],
   "homepage": "http://gitlab.4so.local/fourseasons/4so-web-template",
   "dependencies": {},
-  "engines": {}
+  "engines": {},
+  "devDependencies": {
+    "babel-core": "^6.21.0",
+    "babel-loader": "^6.2.10",
+    "babel-preset-es2015": "^6.18.0",
+    "eslint": "^3.12.2",
+    "eslint-loader": "^1.6.1",
+    "node-sass": "^4.1.1",
+    "webpack": "^1.14.0",
+    "webpack-dev-server": "^1.16.2"
+  }
 }
