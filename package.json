@@ -17,7 +17,9 @@
     "url": "http://gitlab.4so.local/fourseasons/4so-web-template/issues"
   },
   "scripts": {
-    "start": "webpack-dev-server"
+    "start": "webpack-dev-server",
+    "sass-watch": "node-sass --watch --recursive --output src/css/ --source-map true --source-map-contents src/sass/",
+    "sass-compile": "node-sass --output src/css/ --source-map true --source-map-contents src/sass/"
   },
   "license": "UNLICENSED",
   "private": true,
