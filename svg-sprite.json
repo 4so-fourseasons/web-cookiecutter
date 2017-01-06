@@ -1,0 +1,16 @@
+{
+    "dest": "src",
+    "mode": {
+        "css": {
+            "dest": "sass",
+            "sprite": "../img/sprite.svg",
+            "bust": false,
+            "render": {
+                "scss": {
+                    "dest": "components/_svg-sprite.scss"
+                }
+            },
+            "example": false
+        }
+    }
+}

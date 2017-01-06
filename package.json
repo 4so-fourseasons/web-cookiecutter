@@ -1,6 +1,6 @@
 {
   "name": "4so-web-template",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "main": "index.html",
   "description": "Basic template for new websites.",
   "repository": {
@@ -19,7 +19,8 @@
   "scripts": {
     "start": "webpack-dev-server",
     "sass-watch": "node-sass --watch --recursive --output src/css/ --source-map true --source-map-contents src/sass/",
-    "sass-compile": "node-sass --output src/css/ --source-map true --source-map-contents src/sass/"
+    "sass-compile": "node-sass --output src/css/ --source-map true --source-map-contents src/sass/",
+    "svg-sprite": "rimraf src/img/sprite.svg && svg-sprite --config svg-sprite.json src/img/**/*.svg"
   },
   "license": "UNLICENSED",
   "private": true,
@@ -42,6 +43,8 @@
     "eslint": "^3.12.2",
     "eslint-loader": "^1.6.1",
     "node-sass": "^4.1.1",
+    "rimraf": "^2.5.4",
+    "svg-sprite": "^1.3.6",
     "webpack": "^1.14.0",
     "webpack-dev-server": "^1.16.2"
   }
