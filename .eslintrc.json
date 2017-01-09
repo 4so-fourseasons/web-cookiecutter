@@ -3,7 +3,7 @@
     "env": {
         "browser": true,
         "jquery": true,
-        "es6": false
+        "es6": true
     },
     "globals": {},
     "ecmaFeatures": {
@@ -185,7 +185,7 @@
          */
         "indent": [
             1,
-            2,
+            4,
             {
                 "SwitchCase": 1
             }
