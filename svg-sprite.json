@@ -1,5 +1,13 @@
 {
     "dest": "src",
+    "shape": {
+        "dimension": {
+            "precision": 0
+        },
+        "spacing": {
+            "padding": 1
+        }
+    },
     "mode": {
         "css": {
             "dest": "sass",
