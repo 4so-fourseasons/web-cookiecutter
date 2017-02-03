@@ -14,17 +14,17 @@
 // Base
 @import "base/base";
 
+// Components - in alphabetical order
+@import "components/button";
+@import "components/nav-main";
+@import "components/svg-sprite";
+
 // Layout
 @import "layout/content";
 @import "layout/footer";
 @import "layout/grid";
 @import "layout/header";
 @import "layout/wrapper";
-
-// Components - in alphabetical order
-@import "components/button";
-@import "components/nav-main";
-@import "components/svg-sprite";
 
 // Specific page styles
 @import "pages/home";
