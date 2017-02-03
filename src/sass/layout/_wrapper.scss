@@ -1,0 +1,10 @@
+/**
+ * The wrapper of the page - usually used to center the page and give it a
+ * maximum width. Can also be used to apply styles to the main wrapping elements
+ * like body and html.
+ */
+
+.l-wrapper {
+    margin: 0 auto;
+    width: 960px;
+}

@@ -1,1 +1,14 @@
-// dummy file for a button component
+/**
+ * Button component - example file.
+ */
+
+.button {
+    display: inline-block;
+
+    box-sizing: border-box;
+    margin: 0;
+    border: none;
+    padding: 0;
+
+    background: $color-white;
+}

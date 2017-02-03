@@ -1,52 +1,37 @@
-/* ===========================================
- * main.scss
- * =========================================== */
+//
+// The main file where all other files get imported.
+//
 
-/*
- * vendor
- */
+// Vendor specific styles - place plugin styles here as well
 @import "vendor/normalize/normalize-5.0.0";
 @import "vendor/html5-boilerplate/base-5.3.0";
 
-/*
- * abstracts
- */
+// Abstracts - this stuff does not generate any css in the output
 @import "abstracts/config";
 @import "abstracts/colors";
 @import "abstracts/mixins";
 
-/*
- * base
- */
+// Base
 @import "base/base";
 
-/*
- * layout
- */
-@import "layout/general";
+// Layout
+@import "layout/content";
+@import "layout/footer";
 @import "layout/grid";
 @import "layout/header";
-@import "layout/nav-main";
-@import "layout/footer";
+@import "layout/wrapper";
 
-/*
- * components
- */
+// Components - in alphabetical order
 @import "components/button";
+@import "components/nav-main";
 @import "components/svg-sprite";
 
-/*
- * pages
- */
+// Specific page styles
 @import "pages/home";
 @import "pages/content";
 
-/*
- * themes
- */
+// Themes go here, as the modify the styles the last
 @import "themes/high-contrast";
 
-/*
- * vendor
- */
+// Vendor styles - can also be placed here
 @import "vendor/html5-boilerplate/helper-5.3.0";
