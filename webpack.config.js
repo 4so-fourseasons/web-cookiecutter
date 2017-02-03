@@ -6,11 +6,30 @@ module.exports = [
             filename: 'js/main.bundle.js'
         },
         module: {
-            loaders: [
+            rules: [
                 {
                     test: /\.js$/,
                     exclude: /(node_modules|bower_components|vendor)/,
-                    loaders: ['babel-loader', 'eslint-loader']
+                    enforce: 'pre',
+                    use: [
+                        {
+                            loader: 'eslint-loader',
+                            options: {
+                                failOnWarning: false,
+                                failOnError: true,
+                                configFile: './.eslintrc.json'
+                            }
+                        }
+                    ]
+                },
+                {
+                    test: /\.js$/,
+                    exclude: /(node_modules|bower_components|vendor)/,
+                    use: [
+                        {
+                            loader: 'babel-loader'
+                        }
+                    ]
                 }
             ]
         },
@@ -20,11 +39,6 @@ module.exports = [
             colors: true,
             inline: true
         },
-        devtool: 'source-map',
-        eslint: {
-            failOnWarning: false,
-            failOnError: true,
-            configFile: './.eslintrc.json'
-        }
+        devtool: 'source-map'
     }
 ];
