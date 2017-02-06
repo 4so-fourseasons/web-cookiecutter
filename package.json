@@ -22,6 +22,7 @@
     "webpack-watch": "webpack --watch",
     "sass-watch": "node-sass --watch --recursive --output src/css/ --source-map true --source-map-contents src/sass/",
     "sass-compile": "node-sass --output src/css/ --source-map true --source-map-contents src/sass/",
+	"sass-compile-prod": "rimraf src/css && node-sass --output src/css/ --output-style compressed src/sass/",
     "svg-sprite": "rimraf src/img/sprite.svg && svg-sprite --config svg-sprite.json src/img/**/*.svg",
     "stylelint": "stylelint \"src/sass/**/*.scss\" || echo"
   },
