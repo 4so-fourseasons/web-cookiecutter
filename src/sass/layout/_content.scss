@@ -4,5 +4,10 @@
  */
 
 .l-content {
+    display: flex;
 
+    .test {
+        background: blue;
+        color: white;
+    }
 }
