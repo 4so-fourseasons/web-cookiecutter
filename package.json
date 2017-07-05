@@ -18,13 +18,54 @@
   },
   "scripts": {
     "start": "webpack-dev-server",
-    "webpack": "webpack",
-    "webpack-watch": "webpack --watch",
-    "sass-watch": "node-sass --watch --recursive --output src/css/ --source-map true --source-map-contents src/sass/",
-    "sass-compile": "node-sass --output src/css/ --source-map true --source-map-contents src/sass/",
-	"sass-compile-prod": "rimraf src/css && node-sass --output src/css/ --output-style compressed src/sass/",
+    "build": "todo",
+    "test": "todo",
     "svg-sprite": "rimraf src/img/sprite.svg && svg-sprite --config svg-sprite.json src/img/**/*.svg",
     "stylelint": "stylelint \"src/sass/**/*.scss\" || echo"
+  },
+  "babel": {
+    "presets": [
+      "es2015",
+      {
+        "modules": false
+      }
+    ],
+    "stage-0"
+  },
+  "env": {
+    "test": {
+      "plugins": [
+        [
+          "transform-es2015-modules-commonjs"
+        ]
+      ]
+    }
+  },
+  "jest": {
+    "modulePaths": [
+      "src"
+    ],
+    "moduleFileExtensions": [
+      "js"
+    ],
+    "collectCoverageFrom": [
+      "**/src/**/*.js"
+    ],
+    "moduleNameMapper": {
+      "\\.(jpeg|jpg|png|gif|eot|webp|svg|ttf|woff2|mp3|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(css|less)$": "<rootDir>/__mocks__/styleMock.js"
+    },
+    "coverageReporters": [
+      "json",
+      "lcov",
+      "text"
+    ]
+  },
+  "standard": {
+    "ignore": [
+      "**/dist/",
+      "**/tests/"
+    ]
   },
   "license": "UNLICENSED",
   "private": true,
