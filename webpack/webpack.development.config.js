@@ -14,7 +14,7 @@ module.exports = {
     'webpack-dev-server/client?http://localhost:3000',
     'webpack/hot/only-dev-server',
     // Entrypoint
-    path.join(__dirname, '../src/index.js')
+      path.join(__dirname, '../src/js/index.js')
   ],
   output: {
     // Put outputted files into dist folder

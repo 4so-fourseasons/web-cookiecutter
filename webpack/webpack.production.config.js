@@ -8,7 +8,7 @@ module.exports = {
   entry: [
     'babel-polyfill',
     // Entrypoint
-    path.join(__dirname, '../src/index.js')
+    path.join(__dirname, '../src/js/index.js')
   ],
   output: {
     // Put outputted files into dist folder
