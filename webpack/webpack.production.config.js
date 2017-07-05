@@ -1,8 +1,9 @@
 'use strict'
 
-var path = require('path')
-var webpack = require('webpack')
-var HtmlWebpackPlugin = require('html-webpack-plugin')
+const path = require('path')
+const webpack = require('webpack')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 module.exports = {
   entry: [
@@ -61,11 +62,23 @@ module.exports = {
     // Gives us the ability to e.g. switch between dev and production environment
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify('production')
-    })
+    }),
+
+    // Extracts css into separate css file
+    new ExtractTextPlugin("main.css"),
   ],
 
   module: {
-    rules: require('./webpack.loaders.js')
+    rules: [
+      require('./webpack.loaders.js'),
+      {
+        test: /\.css$/,
+        use: ExtractTextPlugin.extract({
+          fallback: "style-loader",
+          use: "css-loader"
+        })
+      }
+    ]
   }
 }
 
