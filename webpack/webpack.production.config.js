@@ -4,6 +4,7 @@ const path = require('path')
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const loaders = require('./webpack.loaders.js')
 
 module.exports = {
   entry: [
@@ -42,7 +43,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: 'src/index.tpl.html',
       inject: 'body',
-      filename: '200.html'
+      filename: 'index.html'
       // TODO favicon: 'src/img/favicon.png'
     }),
 
@@ -70,7 +71,7 @@ module.exports = {
 
   module: {
     rules: [
-      require('./webpack.loaders.js'),
+      ...loaders,
       {
         test: /\.css$/,
         use: ExtractTextPlugin.extract({

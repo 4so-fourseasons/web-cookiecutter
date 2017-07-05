@@ -9,7 +9,6 @@ module.exports = {
   devtool: 'eval-source-map',
   entry: [
     'babel-polyfill',
-    'react-hot-loader/patch',
     // Dev-server
     'webpack-dev-server/client?http://localhost:3000',
     'webpack/hot/only-dev-server',

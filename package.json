@@ -87,7 +87,9 @@
     "Theo Salzmann"
   ],
   "homepage": "http://gitlab.4so.local/fourseasons/4so-web-template",
-  "dependencies": {},
+  "dependencies": {
+    "babel-polyfill": "^6.23.0"
+  },
   "engines": {},
   "devDependencies": {
     "babel-core": "^6.21.0",
