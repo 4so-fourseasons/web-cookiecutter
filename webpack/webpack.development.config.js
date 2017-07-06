@@ -76,9 +76,9 @@ module.exports = {
           {
             loader: 'css-loader' // translates CSS into modules
           },
-          // {
-            // loader: 'postcss-loader' // used for features like autoprefixer
-          // },
+          {
+            loader: 'postcss-loader' // used for features like autoprefixer
+          },
           {
             loader: 'sass-loader' // compiles Sass to CSS
           },
