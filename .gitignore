@@ -2,14 +2,6 @@
 # https://github.com/github/gitignore
 
 
-# https://github.com/github/gitignore/blob/master/Android.gitignore
-# ======================================================================================================================
-# Intellij - this is extracted
-*.iml
-# Remove this line when using a java project to share run configurations
-.idea/
-
-
 # https://github.com/github/gitignore/blob/master/Global/Windows.gitignore
 # ======================================================================================================================
 # Windows image file caches
