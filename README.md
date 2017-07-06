@@ -33,26 +33,42 @@ _localhost:8080_. Changes are then monitored by webpack and standardJS linting.
 Furthermore the page will reload on all scss changes and most js changes.
 
 To lint your JS files without running webpack, use
+
 ```npm run lint```
 
+
 To automatically fix standardJS issues, use
+
 ```npm run fix```
 
+
 To lint your stylesheets, use
+
 ```npm run stylelint```
 
+
 To run unittests as well as both linters, use
+
 ```npm run test```
 
+
 To run jest in watch mode, use
+
 ```npm run test:watch```
 
+
 To compile _.svg_ files into sprites, use
+
 ```npm run svg-sprite```
 
 
+
 ### Production
-Simply run `npm run build` to get a production ready build.
+Simply run
+
+`npm run build`
+
+to get a production ready build.
 This will create a _dist/_ directory inside your project root, alongside
 with all compiled javascript/css files as well as your assets and an index.html.
 Note that the index.html file is created from the _index.tpl.html_ inside the
