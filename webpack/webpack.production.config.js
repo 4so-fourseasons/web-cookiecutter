@@ -7,7 +7,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const loaders = require('./webpack.commonLoaders')
 
 const extractSass = new ExtractTextPlugin({
-  filename: "[name].[contenthash].css",
+  filename: '[name].[contenthash].css'
 })
 
 module.exports = {
@@ -84,19 +84,18 @@ module.exports = {
         use: extractSass.extract({
           use: [
             {
-              loader: "css-loader"
+              loader: 'css-loader'
             },
             {
-              loader: "postcss-loader"
+              loader: 'postcss-loader'
             },
             {
-              loader: "sass-loader"
+              loader: 'sass-loader'
             }
           ],
-          fallback: "style-loader",
+          fallback: 'style-loader'
         })
       }
     ]
   }
 }
-

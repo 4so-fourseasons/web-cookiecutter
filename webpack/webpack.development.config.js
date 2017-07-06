@@ -16,7 +16,7 @@ module.exports = {
     'webpack/hot/only-dev-server',
 
     // Entrypoint
-      path.join(__dirname, '../src/js/index.js')
+    path.join(__dirname, '../src/js/index.js')
   ],
   output: {
     // Put outputted files into dist folder
@@ -81,10 +81,9 @@ module.exports = {
           },
           {
             loader: 'sass-loader' // compiles Sass to CSS
-          },
+          }
         ]
-      },
+      }
     ]
   }
 }
-
