@@ -84,7 +84,10 @@ module.exports = {
         use: extractSass.extract({
           use: [
             {
-              loader: 'css-loader'
+              loader: 'css-loader',
+              options: {
+                minimize: true,
+              }
             },
             {
               loader: 'postcss-loader'
