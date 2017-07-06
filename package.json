@@ -61,7 +61,7 @@
     ],
     "moduleNameMapper": {
       "\\.(jpeg|jpg|png|gif|eot|webp|svg|ttf|woff2|mp3|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
-      "\\.(css|less)$": "<rootDir>/__mocks__/styleMock.js"
+      "\\.(css|scss)$": "<rootDir>/__mocks__/styleMock.js"
     },
     "coverageReporters": [
       "json",
@@ -73,6 +73,11 @@
     "ignore": [
       "**/dist/",
       "**/tests/"
+    ],
+    "globals": [
+      "describe",
+      "it",
+      "expect"
     ]
   },
   "license": "UNLICENSED",
