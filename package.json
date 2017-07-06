@@ -22,8 +22,8 @@
     "lint": "standard --parser babel-eslint",
     "fix": "standard --parser babel-eslint --fix",
     "stylelint": "stylelint \"src/sass/**/*.scss\" || echo",
-    "pretest": "npm run test:clean && npm run lint",
     "test:clean": "rimraf ./coverage",
+    "pretest": "npm run test:clean && npm run lint && npm run stylelint",
     "test": "NODE_ENV=test jest --coverage",
     "test:watch": "NODE_ENV=test jest --coverage --watch",
     "coveralls": "NODE_ENV=test jest --coverage --runInBand && cat ./coverage/lcov.info | coveralls",
@@ -94,6 +94,7 @@
   "devDependencies": {
     "autoprefixer": "^7.1.1",
     "babel-core": "^6.21.0",
+    "babel-eslint": "^7.2.3",
     "babel-jest": "^20.0.3",
     "babel-loader": "^7.1.1",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.24.1",

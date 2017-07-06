@@ -8,9 +8,9 @@
 @import "abstracts/mixins";
 
 // Vendor specific styles - place plugin styles here as well
-@import "vendors/normalize/normalize-5.0.0";
-@import "vendors/html5-boilerplate/base-5.3.0";
-@import "vendors/html5-boilerplate/helper-5.3.0";
+@import "vendor/normalize/normalize-5.0.0";
+@import "vendor/html5-boilerplate/base-5.3.0";
+@import "vendor/html5-boilerplate/helper-5.3.0";
 
 // Base
 @import "base/base";
