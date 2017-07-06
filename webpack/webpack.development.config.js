@@ -3,7 +3,7 @@
 const path = require('path')
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const loaders = require('./webpack.loaders')
+const loaders = require('./webpack.commonLoaders')
 
 module.exports = {
   // Debugging config
@@ -64,7 +64,27 @@ module.exports = {
   ],
 
   module: {
-    rules: loaders
+    rules: [
+      ...loaders,
+      {
+        // Style loader
+        test: /\.scss$/,
+        use: [
+          {
+            loader: 'style-loader' // Creates style nodes from js strings
+          },
+          {
+            loader: 'css-loader' // translates CSS into modules
+          },
+          // {
+            // loader: 'postcss-loader' // used for features like autoprefixer
+          // },
+          {
+            loader: 'sass-loader' // compiles Sass to CSS
+          },
+        ]
+      },
+    ]
   }
 }
 

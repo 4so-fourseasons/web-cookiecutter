@@ -21,24 +21,6 @@ module.exports = [
     ]
   },
   {
-    // Style loader
-    test: /\.scss$/,
-    use: [
-      {
-        loader: 'style-loader' // Creates style nodes from js strings
-      },
-      {
-        loader: 'css-loader' // translates CSS into modules
-      },
-      // {
-        // loader: 'postcss-loader' // used for features like autoprefixer
-      // },
-      {
-        loader: 'sass-loader' // compiles Sass to CSS
-      },
-    ]
-  },
-  {
     test: /\.json?$/,
     loader: 'json-loader'
   },

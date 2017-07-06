@@ -4,7 +4,7 @@ const path = require('path')
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
-const loaders = require('./webpack.loaders')
+const loaders = require('./webpack.commonLoaders')
 
 const extractSass = new ExtractTextPlugin({
   filename: "[name].[contenthash].css",
