@@ -21,13 +21,13 @@
     "build": "NODE_ENV=production rimraf dist && webpack --config ./webpack/webpack.production.config.js --progress --profile --colors",
     "lint": "standard --parser babel-eslint",
     "fix": "standard --parser babel-eslint --fix",
+    "stylelint": "stylelint \"src/sass/**/*.scss\" || echo",
     "pretest": "npm run test:clean && npm run lint",
     "test:clean": "rimraf ./coverage",
     "test": "NODE_ENV=test jest --coverage",
     "test:watch": "NODE_ENV=test jest --coverage --watch",
     "coveralls": "NODE_ENV=test jest --coverage --runInBand && cat ./coverage/lcov.info | coveralls",
-    "svg-sprite": "rimraf src/img/sprite.svg && svg-sprite --config svg-sprite.json src/img/**/*.svg",
-    "stylelint": "stylelint \"src/sass/**/*.scss\" || echo"
+    "svg-sprite": "rimraf src/img/sprite.svg && svg-sprite --config svg-sprite.json src/img/**/*.svg"
   },
   "babel": {
     "presets": [
@@ -92,6 +92,7 @@
   },
   "engines": {},
   "devDependencies": {
+    "autoprefixer": "^7.1.1",
     "babel-core": "^6.21.0",
     "babel-jest": "^20.0.3",
     "babel-loader": "^7.1.1",
@@ -107,9 +108,10 @@
     "html-webpack-plugin": "^2.29.0",
     "image-webpack-loader": "^3.3.1",
     "jest": "^20.0.4",
-    "node-sass": "^4.1.1",
+    "node-sass": "^4.5.3",
     "postcss-loader": "^2.0.6",
     "rimraf": "^2.5.4",
+    "sass-loader": "^6.0.6",
     "standard": "^10.0.2",
     "standard-loader": "^6.0.1",
     "style-loader": "^0.18.2",

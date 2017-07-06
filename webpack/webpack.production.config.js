@@ -4,7 +4,11 @@ const path = require('path')
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
-const loaders = require('./webpack.loaders.js')
+const loaders = require('./webpack.loaders')
+
+const extractSass = new ExtractTextPlugin({
+  filename: "[name].[contenthash].css",
+})
 
 module.exports = {
   entry: [
@@ -27,6 +31,9 @@ module.exports = {
     ]
   },
   plugins: [
+    // Split bundle into vendor and manifest files
+    // This way clients don't need to reload all
+    // vendor assets, whenever the main app changes
     new webpack.optimize.CommonsChunkPlugin({
       name: 'vendor',
       minChunks: function (module) {
@@ -65,18 +72,25 @@ module.exports = {
       'process.env.NODE_ENV': JSON.stringify('production')
     }),
 
-    // Extracts css into separate css file
-    new ExtractTextPlugin("main.css"),
+    // Extracts Sass
+    extractSass
   ],
 
   module: {
     rules: [
       ...loaders,
       {
-        test: /\.css$/,
-        use: ExtractTextPlugin.extract({
+        test: /\.scss$/,
+        use: extractSass.extract({
+          use: [
+            {
+              loader: "css-loader"
+            },
+            {
+              loader: "sass-loader"
+            }
+          ],
           fallback: "style-loader",
-          use: "css-loader"
         })
       }
     ]

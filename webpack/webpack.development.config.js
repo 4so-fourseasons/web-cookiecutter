@@ -1,17 +1,20 @@
 'use strict'
 
-var path = require('path')
-var webpack = require('webpack')
-var HtmlWebpackPlugin = require('html-webpack-plugin')
+const path = require('path')
+const webpack = require('webpack')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const loaders = require('./webpack.loaders')
 
 module.exports = {
   // Debugging config
   devtool: 'eval-source-map',
   entry: [
     'babel-polyfill',
+
     // Dev-server
-    'webpack-dev-server/client?http://localhost:3000',
+    'webpack-dev-server/client?http://localhost:8080',
     'webpack/hot/only-dev-server',
+
     // Entrypoint
       path.join(__dirname, '../src/js/index.js')
   ],
@@ -61,7 +64,7 @@ module.exports = {
   ],
 
   module: {
-    rules: require('./webpack.loaders.js')
+    rules: loaders
   }
 }
 

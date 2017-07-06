@@ -2,6 +2,7 @@
 
 module.exports = [
   {
+    // Lint with standard
     test: /\.js?$/,
     enforce: 'pre',
     loader: 'standard-loader',
@@ -21,11 +22,20 @@ module.exports = [
   },
   {
     // Style loader
-    test: /\.css$/,
+    test: /\.scss$/,
     use: [
-      { loader: 'style-loader' },
-      { loader: 'css-loader?modules' },
-      { loader: 'postcss-loader' }
+      {
+        loader: 'style-loader' // Creates style nodes from js strings
+      },
+      {
+        loader: 'css-loader' // translates CSS into modules
+      },
+      // {
+        // loader: 'postcss-loader' // used for features like autoprefixer
+      // },
+      {
+        loader: 'sass-loader' // compiles Sass to CSS
+      },
     ]
   },
   {
