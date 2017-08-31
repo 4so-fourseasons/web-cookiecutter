@@ -1,5 +1,8 @@
 module.exports = {
-  'extends': 'stylelint-config-standard',
+  'extends': [
+    'stylelint-config-standard',
+    'stylelint-config-idiomatic-order'
+  ],
   'ignoreFiles': [
     'src/sass/vendor/**/*.scss',
     'src/sass/components/_svg-sprite.scss'

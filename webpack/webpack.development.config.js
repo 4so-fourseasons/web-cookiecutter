@@ -3,11 +3,20 @@
 const path = require('path')
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin')
+const FlowWebpackPlugin = require('flow-webpack-plugin')
+const StyleLintPlugin = require('stylelint-webpack-plugin')
 const loaders = require('./webpack.commonLoaders')
 
 module.exports = {
   // Debugging config
   devtool: 'eval-source-map',
+  devServer: {
+    hot: true,
+    stats: {
+      colors: true
+    }
+  },
   entry: [
     'babel-polyfill',
 
@@ -56,6 +65,17 @@ module.exports = {
     // better readable module names in the browser on HMR updates
     new webpack.NamedModulesPlugin(),
 
+    // flow type checking
+    new FlowWebpackPlugin(),
+
+    // Style linting
+    new StyleLintPlugin({
+      configfile: '../stylelint.config.js'
+    }),
+
+    // Nicer webpack logs in the console
+    new FriendlyErrorsWebpackPlugin(),
+
     // Helps passing variables between webpack and js-files
     // Gives us the ability to e.g. switch between dev and production environment
     new webpack.DefinePlugin({
@@ -67,6 +87,19 @@ module.exports = {
     rules: [
       ...loaders,
       {
+        // Lint with standard
+        test: /\.js?$/,
+        enforce: 'pre',
+        exclude: /node_modules/,
+        use: {
+          loader: 'standard-loader',
+          options: {
+            error: false,
+            snazzy: true
+          }
+        }
+      },
+      {
         // Style loader
         test: /\.scss$/,
         use: [
@@ -74,13 +107,33 @@ module.exports = {
             loader: 'style-loader' // Creates style nodes from js strings
           },
           {
-            loader: 'css-loader' // translates CSS into modules
+            loader: 'css-loader', // translates CSS into modules
+            options: {
+              sourceMap: true
+            }
           },
           {
-            loader: 'postcss-loader' // used for features like autoprefixer
+            loader: 'postcss-loader', // used for features like autoprefixer
+            options: {
+              sourceMap: true
+            }
           },
           {
-            loader: 'sass-loader' // compiles Sass to CSS
+            loader: 'sass-loader', // compiles Sass to CSS
+            options: {
+              sourceMap: true
+            }
+          }
+        ]
+      },
+      {
+        test: /\.css/,
+        use: [
+          {
+            loader: 'style-loader'
+          },
+          {
+            loader: 'css-loader'
           }
         ]
       }

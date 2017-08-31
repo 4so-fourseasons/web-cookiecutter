@@ -7,6 +7,7 @@ Here is an overview of all basic features, which are currently supported:
 * Autoprefixing of styles
 * Creation of svg-sprites
 * StandardJS-linting
+* Flow-Type-Checking
 * style-linting
 * Unit testing with Jest
 * Creation of test coverage via coveralls and jest
@@ -28,26 +29,42 @@ Now you are able to use all provided features, which are:
 To start the development server simply type
 ```npm start``` 
 into your CLI.
-This will spawn the webpack-dev-server and make the project available at
-_localhost:8080_. Changes are then monitored by webpack and standardJS linting.
-Furthermore the page will reload on all scss changes and most js changes.
+This will build a svg-sprite from svg images and spawn the webpack-dev-server and make the project available at
+_localhost:8080_. Changes are then monitored by webpack.
+This also includes:
+* Standard-Linting
+* Style-Linting
+* Flow Type-Checking
 
-To lint your JS files without running webpack, use
+To manually lint your JS files without running webpack, use
 
 ```npm run lint```
 
+or
 
-To automatically fix standardJS issues, use
+```npm run lint:fix```
 
-```npm run fix```
+to lint and automatically fix issues (if possible)
+
 
 
 To lint your stylesheets, use
 
 ```npm run stylelint```
 
+or
 
-To run unittests as well as both linters, use
+```npm run stylelint:fix```
+
+to lint and automatically fix issues (if possible)
+
+
+To run Flow type-checking
+
+```npm run flow```
+
+
+To run unittests, use
 
 ```npm run test```
 
@@ -55,6 +72,11 @@ To run unittests as well as both linters, use
 To run jest in watch mode, use
 
 ```npm run test:watch```
+
+
+To run unit tests as well as linters, run:
+
+```npm run lintAndTest```
 
 
 To compile _.svg_ files into sprites, use
@@ -69,7 +91,7 @@ Simply run
 `npm run build`
 
 to get a production ready build.
-This will create a _dist/_ directory inside your project root, alongside
+This will build a svg-sprite from svg-images and create a _dist/_ directory inside your project root, alongside
 with all compiled javascript/css files as well as your assets and an index.html.
 Note that the index.html file is created from the _index.tpl.html_ inside the
 _src/_ directory.

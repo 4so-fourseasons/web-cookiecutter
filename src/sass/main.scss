@@ -7,29 +7,9 @@
 @import "abstracts/colors";
 @import "abstracts/mixins";
 
-// Vendor specific styles - place plugin styles here as well
-@import "vendor/normalize/normalize-5.0.0";
-@import "vendor/html5-boilerplate/base-5.3.0";
-@import "vendor/html5-boilerplate/helper-5.3.0";
+html {
+    margin: 5px;
+    color: red;
 
-// Base
-@import "base/base";
-
-// Layout
-@import "layout/content";
-@import "layout/footer";
-@import "layout/grid";
-@import "layout/header";
-@import "layout/wrapper";
-
-// Components - in alphabetical order
-@import "components/button";
-@import "components/nav-main";
-@import "components/svg-sprite";
-
-// Specific page styles
-@import "pages/home";
-@import "pages/content";
-
-// Themes go here, as the modify the styles the last
-@import "themes/high-contrast";
+    content: "";
+}

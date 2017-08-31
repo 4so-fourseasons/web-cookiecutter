@@ -7,7 +7,11 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const loaders = require('./webpack.commonLoaders')
 
 const extractSass = new ExtractTextPlugin({
-  filename: '[name].[contenthash].css'
+  filename: 'css/[name].[contenthash].css'
+})
+
+const extractCss = new ExtractTextPlugin({
+  filename: 'css/[name].[contenthash].css'
 })
 
 module.exports = {
@@ -21,8 +25,8 @@ module.exports = {
     path: path.join(__dirname, '..', '/dist/'),
 
     // Calc output file name dynamically,
-    filename: '[name].[hash].min.js',
-    publicPath: '/'
+    filename: 'js/[name].[hash].min.js',
+    publicPath: './'
   },
   resolve: {
     modules: [
@@ -72,6 +76,8 @@ module.exports = {
       'process.env.NODE_ENV': JSON.stringify('production')
     }),
 
+    extractCss,
+
     // Extracts Sass
     extractSass
   ],
@@ -79,6 +85,20 @@ module.exports = {
   module: {
     rules: [
       ...loaders,
+      {
+        test: /\.css$/,
+        use: extractCss.extract({
+          use: [
+            {
+              loader: 'css-loader',
+              options: {
+                minimize: true
+              }
+            }
+          ],
+          fallback: 'style-loader'
+        })
+      },
       {
         test: /\.scss$/,
         use: extractSass.extract({

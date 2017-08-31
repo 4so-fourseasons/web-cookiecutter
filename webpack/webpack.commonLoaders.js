@@ -2,17 +2,6 @@
 
 module.exports = [
   {
-    // Lint with standard
-    test: /\.js?$/,
-    enforce: 'pre',
-    loader: 'standard-loader',
-    exclude: /node_modules/,
-    options: {
-      error: false,
-      snazzy: true
-    }
-  },
-  {
     // Transpile ES6
     test: /\.js?$/,
     exclude: /node_modules/,
