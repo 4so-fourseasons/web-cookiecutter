@@ -24,6 +24,7 @@ module.exports = {
         // block-no-empty is disabled because sass won't render those anyway
     'block-no-empty': null,
         // enforce double quotes
-    'string-quotes': ['double']
+    'string-quotes': ['double'],
+    'at-rule-no-unknown': null
   }
 }

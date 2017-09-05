@@ -3,7 +3,7 @@
 // $FlowFixMe
 import 'normalize.css'
 // $FlowFixMe
-import 'sass/main.scss'
+import '../sass/main.scss'
 
 const double = (n: number): number => {
   return n * 2

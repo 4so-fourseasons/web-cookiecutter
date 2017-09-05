@@ -1,5 +1,5 @@
 cache:
-  key: "4so-web-template"
+  key: "{{cookiecutter.project_name}}"
   paths:
     - node_modules/
 
