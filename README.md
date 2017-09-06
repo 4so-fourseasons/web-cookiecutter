@@ -1,3 +1,5 @@
+![Web](img/web.png)
+
 # ToC
 
 <!-- vim-markdown-toc GFM -->
