@@ -118,6 +118,8 @@ if (isDev) {
     devServer: {
       // contentBase: './src',
       hot: true,
+      host: '0.0.0.0',
+      disableHostCheck: true,
       stats: {
         colors: true
       }
