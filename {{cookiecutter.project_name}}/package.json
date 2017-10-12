@@ -37,13 +37,18 @@
   "babel": {
     "presets": [
       [
-        "es2015",
+        "env",
         {
+          "targets": {
+            "browsers": [
+              "last 2 versions"
+            ]
+          },
           "modules": false
         }
       ],
       "flow",
-      "stage-0"
+      "stage-3"
     ],
     "env": {
       "test": {
@@ -102,44 +107,45 @@
   },
   "engines": {},
   "devDependencies": {
-    "autoprefixer": "^7.1.3",
+    "autoprefixer": "^7.1.5",
     "babel-core": "^6.26.0",
-    "babel-eslint": "^7.2.3",
-    "babel-jest": "^21.0.0",
+    "babel-eslint": "^8.0.1",
+    "babel-jest": "^21.2.0",
     "babel-loader": "^7.1.2",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.26.0",
-    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-env": "^1.6.0",
     "babel-preset-flow": "^6.23.0",
-    "babel-preset-stage-0": "^6.24.1",
-    "coveralls": "^2.13.1",
+    "babel-preset-stage-3": "^6.24.1",
+    "coveralls": "^3.0.0",
     "cross-env": "^5.0.5",
     "css-loader": "^0.28.7",
     "eslint-loader": "^1.9.0",
-    "eslint-plugin-flowtype": "^2.35.1",
-    "extract-text-webpack-plugin": "^3.0.0",
-    "file-loader": "^0.11.2",
-    "flow-bin": "^0.54.0",
+    "eslint-plugin-flowtype": "^2.39.1",
+    "extract-text-webpack-plugin": "^3.0.1",
+    "file-loader": "^1.1.5",
+    "flow-bin": "^0.56.0",
     "flow-webpack-plugin": "^1.1.0",
     "friendly-errors-webpack-plugin": "^1.6.1",
+    "html-loader": "^0.5.1",
     "html-webpack-plugin": "^2.30.1",
-    "image-webpack-loader": "^3.4.1",
-    "jest": "^21.0.1",
+    "image-webpack-loader": "^3.4.2",
+    "jest": "^21.2.1",
     "node-sass": "^4.5.3",
-    "postcss": "^6.0.10",
-    "postcss-loader": "^2.0.6",
-    "rimraf": "^2.5.4",
+    "postcss": "^6.0.13",
+    "postcss-loader": "^2.0.7",
+    "rimraf": "^2.6.2",
     "sass-loader": "^6.0.6",
     "standard": "^10.0.3",
     "standard-loader": "^6.0.1",
-    "style-loader": "^0.18.2",
-    "stylelint": "^8.1.1",
+    "style-loader": "^0.19.0",
+    "stylelint": "^8.2.0",
     "stylelint-config-idiomatic-order": "^5.0.0",
     "stylelint-config-standard": "^17.0.0",
     "stylelint-scss": "^2.1.0",
     "stylelint-webpack-plugin": "^0.9.0",
     "svg-sprite": "^1.3.6",
-    "webpack": "^3.5.5",
-    "webpack-dev-server": "^2.7.1",
+    "webpack": "^3.6.0",
+    "webpack-dev-server": "^2.9.1",
     "webpack-merge": "^4.1.0"
   }
 }
