@@ -85,7 +85,8 @@
     "plugins": "flowtype",
     "ignore": [
       "**/dist/",
-      "**/tests/"
+      "**/tests/",
+      "**/flow-typed"
     ],
     "globals": [
       "describe",
