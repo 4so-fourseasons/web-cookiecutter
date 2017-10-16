@@ -35,7 +35,7 @@ const commonConfig = {
     // Automatically resolves those extensions so they can be omitted when
     // importing a file of those types
     extensions: ['.js'],
-    modules: ['node_modules']
+    modules: ['node_modules', 'src']
   },
   module: {
     rules: [
@@ -58,16 +58,33 @@ const commonConfig = {
         }]
       },
       {
-        test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-        loader: 'url-loader?limi=10000&mimetype=application/font-woff'
-      },
-      {
-        test: /\.(ttf|eot|svg|gif|png)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+        test: /\.(woff|woff2|ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+        include: [
+          path.resolve(__dirname, 'src/fonts')
+        ],
         use: [
           {
             loader: 'file-loader',
             options: {
-              name: 'img/[name].[ext]'
+              name: 'fonts/[name].[ext]',
+              outputPath: 'fonts/',
+              useRelativePath: isProd
+            }
+          }
+        ]
+      },
+      {
+        test: /\.(svg|gif|jpg|png|jpeg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+        include: [
+          path.resolve(__dirname, 'src/img')
+        ],
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'img/',
+              useRelativePath: isProd
             }
           }
         ]
