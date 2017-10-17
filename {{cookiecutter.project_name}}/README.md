@@ -8,7 +8,8 @@
         * [Built With](#built-with)
         * [Development commands](#development-commands)
             * [Dev-Server](#dev-server)
-            * [Type-Checker](#type-checker)
+            * [Type-Checker (Flow)](#type-checker-flow)
+                * [Required module not found](#required-module-not-found)
             * [Linters](#linters)
             * [Testing](#testing)
         * [Building](#building)
@@ -73,12 +74,35 @@ rebuild, run your JS files through the Flow type-checker and
 lint you JS with standard and you scss/CSS with stylelint.
 
 
-#### Type-Checker
+#### Type-Checker (Flow)
 
 To separately type-check your JS-files, run:
 
 ```shell
 npm run flow
+```
+
+##### Required module not found
+
+To add third party library flow support use [flow-typed](https://github.com/flowtype/flow-typed).
+
+If the library of your choice does not support flow, you can add a file
+named after the module into the `flow-typed`-directory. The file should have
+the following content in it:
+
+```javascript
+// myModule.js
+declare module 'myModule' {
+  declare module.exports: any
+}
+```
+
+If a local module is not resolve you can add an option to
+the `.flowconfig` like so:
+
+```bash
+[options]
+module.system.node.resolve_dirname=src
 ```
 
 #### Linters
