@@ -54,6 +54,15 @@ bh_unicode_properties.cache
 # https://packagecontrol.io/packages/sublime-github
 GitHub.sublime-settings
 
+# https://github.com/github/gitignore/blame/master/Global/VisualStudioCode.gitignore
+# ======================================================================================================================
+.vscode/*
+# Enable when required
+# !.vscode/settings.json
+# !.vscode/tasks.json
+# !.vscode/launch.json
+# !.vscode/extensions.json
+
 
 # https://github.com/github/gitignore/blob/master/Global/Vim.gitignore
 # ======================================================================================================================
