@@ -1,6 +1,6 @@
 module.exports = {
   'extends': [
-    './stylelint-4so-order.js'
+    '@4so-fourseasons/stylelint-config-sane-order'
   ],
   'ignoreFiles': [
     'src/sass/vendor/**/*.scss',
