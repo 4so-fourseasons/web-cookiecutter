@@ -129,9 +129,7 @@ if (isDev) {
       hot: true,
       host: '0.0.0.0',
       disableHostCheck: true,
-      stats: {
-        colors: true
-      }
+      stats: 'minimal'
     },
     module: {
       rules: [
