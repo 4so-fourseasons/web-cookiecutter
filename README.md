@@ -19,14 +19,12 @@ This is our 4so web template to quickly scaffold web projects.
 
 ## Installing / Getting started
 
-To get started you first need to install Python and [Cookiecutter](https://cookiecutter.readthedocs.io/en/latest/installation.html), on your local maschine. Then you need to clone this repository.
+To get started you first need to install Python and [Cookiecutter](https://cookiecutter.readthedocs.io/en/latest/installation.html), on your local machine.
 
-Now just run the following command from the directory you ran
-the `git clone` command in and cookiecutter will guide you trough a
-minimal setup:
+Now you can simply run the following command to install the template
 
 ```shell
-cookiecutter 4so-web-template
+cookiecutter gh:4so-fourseasons/web-cookiecutter
 ```
 
 This will create a new project in its own directory and update certain files
@@ -56,4 +54,4 @@ made according to our own guidelines. Therefore this template includes:
 
 ## Versioning
 
-We can maybe use [SemVer](http://semver.org/) for versioning. For the versions available, see the [link to tags on this repository](/tags).
+We use [SemVer](http://semver.org/) for versioning.
