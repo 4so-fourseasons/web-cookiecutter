@@ -177,6 +177,8 @@ jspm_packages
 # ======================================================================================================================
 src/js/main.bundle.*
 src/css
+src/img/sprite.svg
+src/sass/components/_svg-sprite.scss
 
 /dist
 /build
