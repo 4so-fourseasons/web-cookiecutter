@@ -1,26 +1,28 @@
+[![JavaScript Style Guide](https://cdn.rawgit.com/standard/standard/master/badge.svg)](https://github.com/standard/standard)<Paste>
+
 # ToC
 
 <!-- vim-markdown-toc GFM -->
 
 * [{{cookiecutter.project_name}}](#cookiecutterproject_name)
-    * [Installing / Getting started](#installing--getting-started)
-    * [Developing](#developing)
-        * [Built With](#built-with)
-        * [Development commands](#development-commands)
-            * [Dev-Server](#dev-server)
-            * [Type-Checker (Flow)](#type-checker-flow)
-                * [Required module not found](#required-module-not-found)
-            * [Linters](#linters)
-            * [Testing](#testing)
-        * [Building](#building)
-        * [CI](#ci)
-        * [Deploying / Publishing](#deploying--publishing)
-    * [Versioning](#versioning)
-    * [Configuration](#configuration)
-    * [Tests](#tests)
-    * [Style guide](#style-guide)
-    * [Api Reference](#api-reference)
-    * [Database](#database)
+	* [Installing / Getting started](#installing--getting-started)
+	* [Developing](#developing)
+		* [Built With](#built-with)
+		* [Development commands](#development-commands)
+			* [Dev-Server](#dev-server)
+			* [Type-Checker (Flow)](#type-checker-flow)
+				* [Required module not found](#required-module-not-found)
+			* [Linters](#linters)
+			* [Testing](#testing)
+		* [Building](#building)
+		* [CI](#ci)
+		* [Deploying / Publishing](#deploying--publishing)
+	* [Versioning](#versioning)
+	* [Configuration](#configuration)
+	* [Tests](#tests)
+	* [Style guide](#style-guide)
+	* [Api Reference](#api-reference)
+	* [Database](#database)
 
 <!-- vim-markdown-toc -->
 
